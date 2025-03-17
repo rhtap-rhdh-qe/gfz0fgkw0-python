@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: gfz0fgkw0-python-gitops
+  description: This is GitOps manifest for gfz0fgkw0-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=gfz0fgkw0-python
+    backstage.io/kubernetes-id: gfz0fgkw0-python 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: gfz0fgkw0-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:gfz0fgkw0-python
